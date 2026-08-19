@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticketing - Railway Reservation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>🚆 E-Ticketing</h1>
+    <p>Online Railway Reservation System</p>
+</header>
+<nav>
+    <a href="#register">Register/Login</a>
+    <a href="#search">Search Trains</a>
+    <a href="#booking">Booking</a>
+    <a href="#payment">Payment</a>
+    <a href="#history">History</a>
+    <a href="#logout">Logout</a>
+</nav>
+<main>
+<section id="register">
+    <h2>User Registration & Login</h2>
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+</section>
+<section id="search">
+    <h2>Search Trains</h2>
+    <input type="text" id="from" placeholder="From">
+    <input type="text" id="to" placeholder="To">
+    <input type="date" id="date">
+    <button onclick="searchTrain()">Search</button>
+    <div id="trains"></div>
+</section>
+<section id="booking">
+    <h2>Passenger Details & Booking</h2>
+    <input type="text" id="passenger" placeholder="Passenger Name">
+    <input type="number" id="age" placeholder="Age">
+    <select id="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+    <button onclick="bookTicket()">Book Ticket</button>
+</section>
+<section id="payment">
+    <h2>Online Payment</h2>
+    <select id="paymentMethod">
+        <option>UPI</option>
+        <option>Credit Card</option>
+        <option>Debit Card</option>
+        <option>Net Banking</option>
+    </select>
+    <button onclick="pay()">Make Payment</button>
+</section>
+<section id="ticket">
+    <h2>E-Ticket</h2>
+    <div id="ticketDetails"></div>
+    <button onclick="window.print()">Print Ticket</button>
+</section>
+<section id="cancel">
+    <h2>Ticket Cancellation & Refund</h2>
+    <input type="text" id="pnr" placeholder="Enter PNR">
+    <button onclick="cancelTicket()">Cancel Ticket</button>
+    <p id="refund"></p>
+</section>
+<section id="history">
+    <h2>Booking History</h2>
+    <div id="historyList">No bookings yet.</div>
+</section>
+<section id="logout">
+    <h2>Logout</h2>
+    <button onclick="logout()">Logout</button>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
